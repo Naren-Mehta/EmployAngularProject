@@ -1,0 +1,25 @@
+
+
+  <div class="form-group">
+      <label for="employeeName">Name</label>
+      <input type="text" class="form-control" id="employeeName" placeholder="Name"
+      [(ngModel)]="currentEmployee.name">
+    </div>
+
+    <div class="form-group">
+      <label for="employeeDomain">Domain</label>
+      <input type="text" class="form-control" id="employeeDomain" placeholder="Domain"
+      [(ngModel)]="currentEmployee.domain" >
+    </div>
+
+    <div class="form-group">
+        <label for="employeeProject">Project</label>
+        <input type="text" class="form-control" id="employeeProject" placeholder="Project"
+        [(ngModel)]="currentEmployee.project">
+      </div>
+
+   
+   
+    <button type="submit" class="btn btn-primary" (click)="updateCurrentEmployee(currentEmployee)">Update Employee</button>
+    <button type="submit" class="btn btn-default" (click)="newEmployPage()">Add Employee</button>
+  

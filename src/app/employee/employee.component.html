@@ -1,0 +1,31 @@
+<div class="col-md-12">
+    <h1>Ng For Example | Employee Component</h1>
+   
+    <div *ngIf="!isEdit">
+        <app-add-employee [employeeListNew]="employeeList"></app-add-employee>
+    </div>
+    <div  *ngIf="isEdit">
+        <app-update-employee [currentEmployee]="currentEmployee" [isEdit]="isEdit"></app-update-employee>
+      </div>
+
+    
+
+    </div>
+
+    <div class="col-md-12">
+    <br/>
+    <br/>
+  </div>
+    <div class="col-md-12">
+      <div class="panel panel-default" *ngFor="let employee of employeeList">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{employee.project}}</h3>
+        </div>
+        <div class="panel-body">
+          <p [innerText]="employee.id"></p> 
+          <p [innerText]="employee.name"></p> 
+          <p [innerText]="employee.domain"></p> 
+        </div>{{isEdit}}
+        <button class="btn btn-success" (click)="updateEmployee(employee); isEdit=true">Update</button>
+      </div>
+  </div>
